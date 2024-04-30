@@ -1,0 +1,6 @@
+.pageContainer {
+  margin: auto;
+  max-width: 90rem;
+  width: 95%;
+  position: relative;
+}

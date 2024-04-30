@@ -1,0 +1,96 @@
+@import "../../../../constants/COLORS";
+@import "../../../../constants/RESPONSIVE";
+.contactSection {
+  display: flex;
+  box-shadow: 0px 7px 12px 2px rgba(0, 0, 0, 0.45);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  @media #{$sm-media} {
+    width: 100%;
+  }
+  @media #{$sm-media} {
+    flex-direction: column-reverse;
+  }
+  .left {
+    width: 50%;
+    @media #{$sm-media} {
+      width: 100%;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      @media #{$sm-media} {
+        margin: 1rem 0;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 80%;
+      width: 100%;
+      gap: 1rem;
+      input {
+        background-color: #ffefe8;
+        padding-left: 1rem;
+        width: calc(100% - 1rem);
+        height: 3rem;
+        border: none;
+        outline: none;
+        font-family: var(--font-poppins);
+        @media #{$sm-media} {
+          width: 100%;
+        }
+      }
+      textarea {
+        padding-left: 1rem;
+        width: calc(100% - 1rem);
+        padding-top: 1rem;
+        resize: none;
+        background-color: #ffefe8;
+        outline: none;
+        border: none;
+        height: 10rem;
+        font-family: var(--font-poppins);
+        @media #{$sm-media} {
+          width: 100%;
+        }
+      }
+      button {
+        background-color: $secondaryColor;
+        border: none;
+        outline: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        width: 100%;
+        padding: 1rem 0;
+        color: #fff;
+        font-family: var(--font-poppins);
+        font-size: 1rem;
+      }
+    }
+  }
+  .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media #{$sm-media} {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    div {
+      div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+  }
+}

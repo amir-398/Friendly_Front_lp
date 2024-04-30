@@ -6,19 +6,30 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "watch:scss": "npm-run-all --parallel header footer headSection contactSection",
+    "header": "sass --watch ./app/components/ui/header/header.module.scss ./app/components/ui/header/header.module.css",
+    "footer": "sass --watch ./app/components/ui/footer/footer.module.scss ./app/components/ui/footer/footer.module.css",
+    "headSection": "sass --watch ./app/(pages)/home/components/headSection/headSection.module.scss ./app/(pages)/home/components/headSection/headSection.module.css",
+    "contactSection": "sass --watch ./app/(pages)/home/components/contactSection/contactSection.module.scss ./app/(pages)/home/components/contactSection/contactSection.module.css"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "install": "^0.13.0",
+    "next": "14.2.3",
+    "npm": "^10.6.0",
+    "npm-run-all": "^4.1.5",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "react-hook-form": "^7.51.3",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "eslint-config-next": "14.2.3",
+    "typescript": "^5"
   }
 }

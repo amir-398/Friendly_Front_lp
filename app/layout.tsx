@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
+import Footer from "./components/ui/footer/Footer";
+import Header from "./components/ui/header/Header";
+import PageContainer from "./components/ui/pageContainer/PageContainer";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+const poppinsFont = Poppins({
+  weight: "600",
+  subsets: ["latin"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +21,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="fr">
+      <body className={poppinsFont.className}>
+        <PageContainer>
+          <Header />
+          {children}
+        </PageContainer>
+        <Footer />
+      </body>
     </html>
   );
 }
