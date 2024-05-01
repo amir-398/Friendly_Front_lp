@@ -1,0 +1,29 @@
+@import "../../../constants/COLORS";
+@import "../../../constants/RESPONSIVE";
+.footer {
+  background-color: $secondaryColor;
+  width: 100%;
+  margin-top: 2rem;
+  .footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+    padding: 1rem;
+    @media #{$sm-media} {
+      flex-direction: column;
+      height: fit-content;
+      gap: 3rem;
+      padding: 2rem 0;
+    }
+    .logoContainer {
+      display: flex;
+      gap: 1rem;
+    }
+    .mentions {
+      @media #{$sm-media} {
+        text-align: center;
+      }
+    }
+  }
+}
