@@ -73,6 +73,11 @@
     width: 100%;
   }
 }
+.contactSection .left form .errorMessage {
+  color: red;
+  font-size: small;
+  margin-left: 0.2rem;
+}
 .contactSection .left form button {
   background-color: #a6c488;
   border: none;
@@ -84,6 +89,10 @@
   color: #fff;
   font-family: var(--font-poppins);
   font-size: 1rem;
+}
+.contactSection .left form button.btnDisabled {
+  background-color: rgba(166, 196, 136, 0.5);
+  cursor: not-allowed;
 }
 .contactSection .right {
   width: 50%;

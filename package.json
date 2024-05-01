@@ -7,21 +7,25 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "watch:scss": "npm-run-all --parallel header footer headSection contactSection",
+    "watch:scss": "npm-run-all --parallel header footer headSection contactSection modalComponent",
     "header": "sass --watch ./app/components/ui/header/header.module.scss ./app/components/ui/header/header.module.css",
     "footer": "sass --watch ./app/components/ui/footer/footer.module.scss ./app/components/ui/footer/footer.module.css",
+    "modalComponent": "sass --watch ./app/components/ui/modalComponent/modal.module.scss ./app/components/ui/modalComponent/modal.module.css",
     "headSection": "sass --watch ./app/(pages)/home/components/headSection/headSection.module.scss ./app/(pages)/home/components/headSection/headSection.module.css",
     "contactSection": "sass --watch ./app/(pages)/home/components/contactSection/contactSection.module.scss ./app/(pages)/home/components/contactSection/contactSection.module.css"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
+    "axios": "^1.6.8",
     "install": "^0.13.0",
     "next": "14.2.3",
     "npm": "^10.6.0",
     "npm-run-all": "^4.1.5",
     "react": "^18",
+    "react-activity": "^2.1.3",
     "react-dom": "^18",
     "react-hook-form": "^7.51.3",
+    "react-icons": "^5.2.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {

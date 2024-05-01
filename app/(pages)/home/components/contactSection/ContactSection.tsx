@@ -1,16 +1,25 @@
 "use client";
 import img from "@/app/assets/images/contact.svg";
+import Modal from "@/app/components/ui/modalComponent/Modal";
 import { yupResolver } from "@hookform/resolvers/yup";
+import axios from "axios";
 import Image from "next/image";
+import { useState } from "react";
+import { Dots } from "react-activity";
+import "react-activity/dist/library.css";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import style from "./contactSection.module.css";
 const schema = yup.object({
   name: yup.string().required("Champ obligatoire !"),
-  email: yup.string().email().required("Champ obligatoire !"),
+  email: yup.string().email("Email invalide").required("Champ obligatoire !"),
   message: yup.string().required("Champ obligatoire !"),
 });
-
+interface IFormInputs {
+  name: string;
+  email: string;
+  message: string;
+}
 export default function ContactSection() {
   const {
     register,
@@ -20,11 +29,20 @@ export default function ContactSection() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const [loading, setLoading] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const onSubmit = async (data: IFormInputs) => {
+    setLoading(true);
+    await axios
+      .post("http://localhost:3000/api/sendEmail", data)
+      .then(() => setModalVisible(true))
+      .catch(() => alert("Une erreur s'est produite !, veuillez réessayer"))
+      .finally(() => setLoading(false));
   };
   return (
     <div className={style.contactSection}>
+      <Modal isVisible={modalVisible} setIsVisible={setModalVisible} />
       <div className={style.left}>
         <h1>Contactez-nous</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -36,6 +54,7 @@ export default function ContactSection() {
               name="name"
               id="name"
             />
+            <p className={style.errorMessage}>{errors.name?.message}</p>
           </div>
           <div>
             <input
@@ -45,6 +64,7 @@ export default function ContactSection() {
               name="email"
               id="email"
             />
+            <p className={style.errorMessage}>{errors.email?.message}</p>
           </div>
           <div>
             <textarea
@@ -53,8 +73,15 @@ export default function ContactSection() {
               id="message"
               placeholder="Allez-u, nous vous écoutons !"
             ></textarea>
+            <p className={style.errorMessage}>{errors.message?.message}</p>
           </div>
-          <button type="submit">Envoyer</button>
+          <button
+            type="submit"
+            disabled={loading}
+            className={loading ? style.btnDisabled : undefined}
+          >
+            {loading ? <Dots /> : "Envoyer"}
+          </button>
         </form>
       </div>
       <div className={style.right}>
@@ -109,7 +136,7 @@ export default function ContactSection() {
               <circle cx="19.3998" cy="19.3961" r="18.2919" stroke="#CFE0BE" />
             </svg>
 
-            <p>Imane.Edouard@my-digital-school.org</p>
+            <p>frienddly.outremer@gmail.com</p>
           </div>
         </div>
       </div>

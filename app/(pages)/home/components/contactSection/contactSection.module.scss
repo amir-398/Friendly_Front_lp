@@ -61,6 +61,11 @@
           width: 100%;
         }
       }
+      .errorMessage {
+        color: red;
+        font-size: small;
+        margin-left: 0.2rem;
+      }
       button {
         background-color: $secondaryColor;
         border: none;
@@ -72,6 +77,10 @@
         color: #fff;
         font-family: var(--font-poppins);
         font-size: 1rem;
+        &.btnDisabled {
+          background-color: rgba($secondaryColor, 0.5);
+          cursor: not-allowed;
+        }
       }
     }
   }
