@@ -1,6 +1,7 @@
 "use client";
 import img from "@/app/assets/images/contact.svg";
 import Image from "next/image";
+import { useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 import style from "./modal.module.css";
 export default function Modal({
@@ -14,6 +15,15 @@ export default function Modal({
     setIsVisible(false);
     window.location.reload();
   };
+
+  //disabled scroll when modal is open
+  useEffect(() => {
+    if (isVisible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isVisible]);
   return (
     <div
       className={[

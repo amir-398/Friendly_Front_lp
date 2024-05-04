@@ -11,6 +11,7 @@
   margin-top: 3rem;
   @media #{$sm-media} {
     width: 100%;
+    padding: 0.5rem;
   }
   @media #{$sm-media} {
     flex-direction: column-reverse;
@@ -39,10 +40,11 @@
         background-color: #ffefe8;
         padding-left: 1rem;
         width: 100%;
-        height: 3rem;
         border: none;
         outline: none;
         font-family: var(--font-poppins);
+        height: 3rem;
+        font-size: clamp(0.8rem, 1vw, 2rem);
         @media #{$sm-media} {
           width: 100%;
         }
@@ -57,6 +59,7 @@
         border: none;
         height: 10rem;
         font-family: var(--font-poppins);
+        font-size: clamp(0.8rem, 1vw, 2rem);
         @media #{$sm-media} {
           width: 100%;
         }
@@ -96,6 +99,9 @@
     img {
       width: 100%;
       margin-bottom: 1rem;
+      @media #{$sm-media} {
+        width: 80%;
+      }
     }
     > div {
       display: flex;

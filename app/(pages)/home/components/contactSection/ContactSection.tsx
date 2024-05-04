@@ -35,7 +35,7 @@ export default function ContactSection() {
   const onSubmit = async (data: IFormInputs) => {
     setLoading(true);
     await axios
-      .post("http://localhost:3000/api/sendEmail", data)
+      .post("https://friendly-lp-back.onrender.com/api/sendEmail", data)
       .then(() => setModalVisible(true))
       .catch(() => alert("Une erreur s'est produite !, veuillez réessayer"))
       .finally(() => setLoading(false));

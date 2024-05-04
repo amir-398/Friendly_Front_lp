@@ -11,6 +11,7 @@
 @media screen and (max-width : 768px) {
   .contactSection {
     width: 100%;
+    padding: 0.5rem;
   }
 }
 @media screen and (max-width : 768px) {
@@ -47,10 +48,11 @@
   background-color: #ffefe8;
   padding-left: 1rem;
   width: 100%;
-  height: 3rem;
   border: none;
   outline: none;
   font-family: var(--font-poppins);
+  height: 3rem;
+  font-size: clamp(0.8rem, 1vw, 2rem);
 }
 @media screen and (max-width : 768px) {
   .contactSection .left form input {
@@ -67,6 +69,7 @@
   border: none;
   height: 10rem;
   font-family: var(--font-poppins);
+  font-size: clamp(0.8rem, 1vw, 2rem);
 }
 @media screen and (max-width : 768px) {
   .contactSection .left form textarea {
@@ -109,6 +112,11 @@
 .contactSection .right img {
   width: 100%;
   margin-bottom: 1rem;
+}
+@media screen and (max-width : 768px) {
+  .contactSection .right img {
+    width: 80%;
+  }
 }
 .contactSection .right > div {
   display: flex;
