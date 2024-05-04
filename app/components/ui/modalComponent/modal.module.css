@@ -16,7 +16,7 @@
 .modalContainer .modalContent {
   background-color: #2f2d43;
   width: 50%;
-  height: 50%;
+  height: fit-content;
   border-radius: 20px;
   z-index: 10000;
   color: #000;
