@@ -49,7 +49,7 @@ export default function ContactSection() {
           <div>
             <input
               {...register("name")}
-              placeholder="Entre ton Nom-prénom"
+              placeholder="Entrez votre Nom et prénom"
               type="text"
               name="name"
               id="name"
@@ -59,8 +59,8 @@ export default function ContactSection() {
           <div>
             <input
               {...register("email")}
-              type="email"
-              placeholder="Email"
+              type="E-mail"
+              placeholder="Votre e-mail"
               name="email"
               id="email"
             />
@@ -71,7 +71,7 @@ export default function ContactSection() {
               {...register("message")}
               name="message"
               id="message"
-              placeholder="Allez-u, nous vous écoutons !"
+              placeholder="Allez-y, nous vous écoutons !"
             ></textarea>
             <p className={style.errorMessage}>{errors.message?.message}</p>
           </div>

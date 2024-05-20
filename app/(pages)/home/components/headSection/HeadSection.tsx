@@ -33,10 +33,7 @@ export default function HeadSection() {
             </div>
             <div className={style.card}>
               <Image src={card_img_6} alt="image" />
-              <p>
-                Je recommande ! J&apos;ai adoré cette aventure au sein de leurs
-                app !
-              </p>
+              <p>Une appli géniale pour se faire des amis rapidement !</p>
             </div>
           </div>
         </div>
@@ -44,15 +41,15 @@ export default function HeadSection() {
       <div className={style.bottom}>
         <div>
           <p>38K</p>
-          <p>Étudiant issue d’outre-mers qui étudie en métropole.</p>
+          <p>Étudiants issue,t d’outre-mers qui étudient en métropole.</p>
         </div>
         <div>
           <p>3K</p>
-          <p>Étudiant qui parte chaque année.</p>
+          <p>Étudiants qui partent chaque année.</p>
         </div>
         <div>
           <p>39%</p>
-          <p>Quittent leur académie d’origine pour venir en métropole.</p>
+          <p>Quittent leurs académie d’origine pour venir en métropole.</p>
         </div>
       </div>
     </div>
