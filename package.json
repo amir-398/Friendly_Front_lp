@@ -7,12 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "watch:scss": "npm-run-all --parallel header footer headSection contactSection modalComponent",
+    "watch:scss": "npm-run-all --parallel header footer headSection contactSection modalComponent mainSection",
     "header": "sass --watch ./app/components/ui/header/header.module.scss ./app/components/ui/header/header.module.css",
     "footer": "sass --watch ./app/components/ui/footer/footer.module.scss ./app/components/ui/footer/footer.module.css",
     "modalComponent": "sass --watch ./app/components/ui/modalComponent/modal.module.scss ./app/components/ui/modalComponent/modal.module.css",
     "headSection": "sass --watch ./app/(pages)/home/components/headSection/headSection.module.scss ./app/(pages)/home/components/headSection/headSection.module.css",
-    "contactSection": "sass --watch ./app/(pages)/home/components/contactSection/contactSection.module.scss ./app/(pages)/home/components/contactSection/contactSection.module.css"
+    "contactSection": "sass --watch ./app/(pages)/home/components/contactSection/contactSection.module.scss ./app/(pages)/home/components/contactSection/contactSection.module.css",
+    "mainSection": "sass --watch ./app/(pages)/home/components/mainSection/mainSection.module.scss ./app/(pages)/home/components/mainSection/mainSection.module.css"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",

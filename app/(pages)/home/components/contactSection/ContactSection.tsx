@@ -4,6 +4,7 @@ import Modal from "@/app/components/ui/modalComponent/Modal";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { Dots } from "react-activity";
 import "react-activity/dist/library.css";
@@ -135,8 +136,9 @@ export default function ContactSection() {
               />
               <circle cx="19.3998" cy="19.3961" r="18.2919" stroke="#CFE0BE" />
             </svg>
-
-            <p>frienddly.outremer@gmail.com</p>
+            <Link href={"mailto:frienddly.outremer@gmail.com"}>
+              <p>frienddly.outremer@gmail.com</p>
+            </Link>
           </div>
         </div>
       </div>

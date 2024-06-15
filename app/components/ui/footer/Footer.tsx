@@ -23,8 +23,12 @@ export default function Footer() {
             </Link>
           </div>
           <div className={style.mentions}>
-            <p>Mentions Légales</p>
-            <p>Politique de confidentialité</p>
+            <Link href={"/cgu"}>
+              <p>Mentions Légales</p>
+            </Link>
+            <Link href={"mailto:frienddly.outremer@gmail.com"}>
+              <p>frienddly.outremer@gmail.com</p>
+            </Link>
           </div>
         </div>
       </PageContainer>

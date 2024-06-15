@@ -1,0 +1,17 @@
+@import "../../../../constants/COLORS";
+@import "../../../../constants/RESPONSIVE";
+.mainContainer {
+  background: $backgroundColor;
+  padding: 0.1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  @media #{$sm-media} {
+    margin-top: 3rem;
+  }
+  div {
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    line-height: 2.5rem;
+  }
+}

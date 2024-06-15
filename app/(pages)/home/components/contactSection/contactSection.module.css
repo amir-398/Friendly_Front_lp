@@ -128,5 +128,8 @@
   align-items: center;
   gap: 1rem;
 }
+.contactSection .right > div a {
+  color: #000;
+}
 
 /*# sourceMappingURL=contactSection.module.css.map */

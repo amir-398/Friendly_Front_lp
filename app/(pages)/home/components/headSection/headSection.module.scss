@@ -17,7 +17,8 @@
       width: 40%;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: center;
+      gap: 3rem;
       @media #{$md-media} {
         width: 50%;
       }
@@ -29,20 +30,28 @@
         font-size: 2.5rem;
         line-height: 3rem;
         margin-bottom: 1rem;
+        margin-top: 0.2rem;
+      }
+      a {
+        width: 25rem;
+        @media #{$md-media} {
+          width: 100%;
+        }
       }
       button {
+        width: 100%;
         padding: 1rem 1rem;
         border: none;
-        background-color: $primaryColor;
+        background-color: $secondaryColor;
         color: #fff;
         border-radius: 20px;
         cursor: pointer;
         font-size: clamp(0.8rem, 2vw, 1.2rem);
         font-family: var(--font-poppins);
         transition: all 0.3s;
-        margin-top: 1rem;
+
         &:hover {
-          background-color: $primaryColor;
+          background-color: darken($secondaryColor, 10%);
           transform: translateY(-0.2rem);
         }
       }
@@ -114,7 +123,7 @@
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-    margin: 2rem 0;
+    margin: 3rem 0;
     @media #{$sm-media} {
       flex-direction: column;
       margin: 0;
@@ -133,17 +142,21 @@
       -webkit-box-shadow: 5px 5px 0px 5px #000000;
       box-shadow: 5px 5px 0px 5px #000000;
       &:nth-child(1) {
-        background-color: $secondaryColor;
+        background-color: $primaryColor;
       }
       &:nth-child(2) {
-        background-color: lighten($secondaryColor, 15%);
+        background-color: #ffefe8;
       }
       &:nth-child(3) {
-        background-color: #ffefe8;
+        background-color: $secondaryColor;
       }
       p:first-child {
         font-size: 2rem;
         font-weight: 700;
+      }
+      p:last-child {
+        font-size: 0.8rem;
+        font-weight: 500;
       }
     }
   }
