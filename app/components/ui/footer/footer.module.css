@@ -27,5 +27,8 @@
     text-align: center;
   }
 }
+.footer .footerContainer a {
+  color: #000;
+}
 
 /*# sourceMappingURL=footer.module.css.map */

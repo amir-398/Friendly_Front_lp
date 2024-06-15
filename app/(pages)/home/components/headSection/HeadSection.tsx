@@ -1,7 +1,8 @@
-import main_img from "@/app/assets/images/img_1.jpg";
-import card_img_5 from "@/app/assets/images/img_5.jpg";
-import card_img_6 from "@/app/assets/images/img_6.jpg";
+import main_img from "@/app/assets/images/img_1.png";
+import card_img_2 from "@/app/assets/images/img_2.png";
+import card_img_3 from "@/app/assets/images/img_3.png";
 import Image from "next/image";
+import Link from "next/link";
 import style from "./headSection.module.css";
 export default function HeadSection() {
   return (
@@ -11,7 +12,7 @@ export default function HeadSection() {
           <div>
             <div>
               <p>✦ Aventure.</p>
-              <h1>Rencontre en rejoingnant Frienddly</h1>
+              <h1>Frienddly, ton allier pour un nouveau départ</h1>
             </div>
             <p>
               Bienvenue dans le monde de &quot;Frienddy&quot;, une application
@@ -19,20 +20,25 @@ export default function HeadSection() {
               harmonieuse des étudiants antillais en France métropolitaine
             </p>
           </div>
-          <button>Télécharger l&apos;application</button>
+          <Link
+            href={"https://www.instagram.com/frienddly.app/"}
+            target="_blank"
+          >
+            <button>Follow nous sur les réseaux</button>
+          </Link>
         </div>
         <div className={style.right}>
           <div className={style.imgContainer}>
             <Image src={main_img} alt="image" />
             <div className={style.card}>
-              <Image src={card_img_5} alt="image" />
+              <Image src={card_img_2} alt="image" />
               <p>
                 Je recommande ! J&apos;ai adoré cette aventure au sein de leurs
                 app !
               </p>
             </div>
             <div className={style.card}>
-              <Image src={card_img_6} alt="image" />
+              <Image src={card_img_3} alt="image" />
               <p>Une appli géniale pour se faire des amis rapidement !</p>
             </div>
           </div>

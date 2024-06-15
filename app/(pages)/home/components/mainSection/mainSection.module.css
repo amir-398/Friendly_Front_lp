@@ -1,0 +1,19 @@
+.mainContainer {
+  background: linear-gradient(90deg, #e66256 0%, #a0c796 100%);
+  padding: 0.1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+@media screen and (max-width : 768px) {
+  .mainContainer {
+    margin-top: 3rem;
+  }
+}
+.mainContainer div {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  line-height: 2.5rem;
+}
+
+/*# sourceMappingURL=mainSection.module.css.map */
